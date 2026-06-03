@@ -19,13 +19,13 @@ class PortfolioRepository {
   const PortfolioRepository();
 
   Profile getProfile() => const Profile(
-        name: 'Alex Rivera',
+        name: 'Pranshu Kumar Agarwal',
         role: 'Full-Stack Developer',
         tagline:
             'I build fast, reactive products end to end — Flutter on the front, '
             'Spring Boot and Postgres on the back.',
-        location: 'Bengaluru, India',
-        email: 'hello@example.com',
+        location: 'Mumbai, India',
+        email: 'pranshuagarwal70@gmail.com',
         resumeUrl: 'https://example.com/resume.pdf',
         bio:
             'I’m a full-stack engineer who likes owning a feature from the pixel '
@@ -35,16 +35,22 @@ class PortfolioRepository {
             'over R2DBC. I care about clean architecture, predictable latency, and '
             'shipping things people actually use.',
         social: SocialLinks(
-          github: 'https://github.com/yourusername',
-          linkedin: 'https://linkedin.com/in/yourusername',
-          twitter: 'https://twitter.com/yourusername',
+          github: 'https://github.com/pranagarwal',
+          linkedin: 'https://linkedin.com/in/pran8959',
+          twitter: 'https://twitter.com/pranagarwal',
         ),
       );
 
   List<SkillGroup> getSkills() => const [
         SkillGroup(
           label: 'Frontend',
-          skills: ['Flutter', 'Dart', 'RxDart', 'Riverpod / Bloc', 'Responsive UI'],
+          skills: [
+            'Flutter',
+            'Dart',
+            'RxDart',
+            'Riverpod / Bloc',
+            'Responsive UI'
+          ],
         ),
         SkillGroup(
           label: 'Backend',
@@ -59,7 +65,13 @@ class PortfolioRepository {
         ),
         SkillGroup(
           label: 'Data',
-          skills: ['PostgreSQL', 'SQL', 'R2DBC', 'JPA / Hibernate', 'Schema Design'],
+          skills: [
+            'PostgreSQL',
+            'SQL',
+            'R2DBC',
+            'JPA / Hibernate',
+            'Schema Design'
+          ],
         ),
         SkillGroup(
           label: 'Tooling',
@@ -114,7 +126,8 @@ class PortfolioRepository {
               'Spring Boot API when back online. Conflict resolution handled '
               'server-side.',
           role: 'Built the full stack: client, sync engine, and API.',
-          outcome: 'Works fully offline; sync completes in under a second on reconnect.',
+          outcome:
+              'Works fully offline; sync completes in under a second on reconnect.',
           tech: ['Flutter', 'Dart', 'Spring Boot', 'PostgreSQL', 'REST'],
           highlights: [
             'Offline-first architecture with a clean local/remote data layer.',
@@ -131,12 +144,17 @@ class PortfolioRepository {
           problem:
               'High-volume metric events needed to be ingested without the '
               'backend falling over under bursts.',
-          solution:
-              'A reactive ingestion pipeline using Project Reactor with '
+          solution: 'A reactive ingestion pipeline using Project Reactor with '
               'backpressure, buffering, and batched writes to Postgres.',
           role: 'Backend engineer — designed and built the reactive pipeline.',
           outcome: 'Sustained 5k events/sec on a single modest instance.',
-          tech: ['Java', 'Spring WebFlux', 'Project Reactor', 'PostgreSQL', 'R2DBC'],
+          tech: [
+            'Java',
+            'Spring WebFlux',
+            'Project Reactor',
+            'PostgreSQL',
+            'R2DBC'
+          ],
           highlights: [
             'Backpressure-aware streams to stay stable under load.',
             'Batched, non-blocking writes via R2DBC.',
