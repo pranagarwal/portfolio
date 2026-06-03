@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../data/models.dart';
 import '../theme/app_theme.dart';
@@ -108,30 +107,25 @@ class HeroSection extends StatelessWidget {
               const SizedBox(height: Gap.lg),
               FadeInUp(
                 delay: const Duration(milliseconds: 480),
-                child: Row(
+                child: Wrap(
+                  spacing: Gap.xs,
+                  runSpacing: Gap.xs,
                   children: [
                     if (profile.social.github != null)
-                      IconLinkButton(
-                        icon: FontAwesomeIcons.github,
+                      SocialButton(
+                        label: 'GitHub',
                         url: profile.social.github!,
-                        tooltip: 'GitHub',
                       ),
-                    if (profile.social.linkedin != null) ...[
-                      const SizedBox(width: Gap.xs),
-                      IconLinkButton(
-                        icon: FontAwesomeIcons.linkedinIn,
+                    if (profile.social.linkedin != null)
+                      SocialButton(
+                        label: 'LinkedIn',
                         url: profile.social.linkedin!,
-                        tooltip: 'LinkedIn',
                       ),
-                    ],
-                    if (profile.social.twitter != null) ...[
-                      const SizedBox(width: Gap.xs),
-                      IconLinkButton(
-                        icon: FontAwesomeIcons.xTwitter,
+                    if (profile.social.twitter != null)
+                      SocialButton(
+                        label: 'X / Twitter',
                         url: profile.social.twitter!,
-                        tooltip: 'X / Twitter',
                       ),
-                    ],
                   ],
                 ),
               ),

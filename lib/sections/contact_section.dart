@@ -13,7 +13,7 @@ import '../widgets/common.dart';
 /// and paste it below. Submissions are emailed to the address you
 /// registered the key with.
 /// =============================================================
-const String kWeb3FormsAccessKey = '7f4f3c86-188f-4cb9-8d36-00c70fd94c5e';
+const String kWeb3FormsAccessKey = 'YOUR-WEB3FORMS-ACCESS-KEY';
 
 class ContactSection extends StatefulWidget {
   final Key sectionKey;
@@ -52,8 +52,7 @@ class _ContactSectionState extends State<ContactSection> {
     if (kWeb3FormsAccessKey == 'YOUR-WEB3FORMS-ACCESS-KEY') {
       setState(() {
         _ok = false;
-        _status =
-            'Add your Web3Forms access key in contact_section.dart first.';
+        _status = 'Add your Web3Forms access key in contact_section.dart first.';
       });
       return;
     }
@@ -224,8 +223,7 @@ class _Field extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label,
-              style: AppTheme.mono(size: 11, color: AppColors.textMuted)),
+          Text(label, style: AppTheme.mono(size: 11, color: AppColors.textMuted)),
           const SizedBox(height: 6),
           TextFormField(
             controller: controller,
@@ -236,8 +234,8 @@ class _Field extends StatelessWidget {
               isDense: true,
               filled: true,
               fillColor: AppColors.surface,
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: Gap.sm, vertical: 14),
+              contentPadding: const EdgeInsets.symmetric(
+                  horizontal: Gap.sm, vertical: 14),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(color: AppColors.border),
@@ -254,8 +252,7 @@ class _Field extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(color: Color(0xFFFF6B6B)),
               ),
-              errorStyle:
-                  AppTheme.mono(size: 11, color: const Color(0xFFFF6B6B)),
+              errorStyle: AppTheme.mono(size: 11, color: const Color(0xFFFF6B6B)),
             ),
           ),
         ],

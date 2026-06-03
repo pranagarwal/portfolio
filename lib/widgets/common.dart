@@ -205,42 +205,47 @@ class GhostButton extends StatelessWidget {
   }
 }
 
-/// Round icon button for social links.
-class IconLinkButton extends StatelessWidget {
-  final IconData icon;
+/// Outlined text-pill link for social profiles (GitHub / LinkedIn / X).
+/// Uses monospace text + a Material arrow icon — no brand-icon package needed,
+/// which keeps the build compatible with current Flutter SDKs.
+class SocialButton extends StatelessWidget {
+  final String label;
   final String url;
-  final String tooltip;
 
-  const IconLinkButton({
-    super.key,
-    required this.icon,
-    required this.url,
-    required this.tooltip,
-  });
+  const SocialButton({super.key, required this.label, required this.url});
 
   @override
   Widget build(BuildContext context) {
-    return Tooltip(
-      message: tooltip,
-      child: Hoverable(
-        builder: (hovering) => GestureDetector(
-          onTap: () => openUrl(url),
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 160),
-            width: 44,
-            height: 44,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: hovering ? AppColors.surfaceAlt : Colors.transparent,
-              border: Border.all(
-                color: hovering ? AppColors.accent : AppColors.border,
+    return Hoverable(
+      builder: (hovering) => GestureDetector(
+        onTap: () => openUrl(url),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 160),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          decoration: BoxDecoration(
+            color: hovering ? AppColors.surfaceAlt : Colors.transparent,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: hovering ? AppColors.accent : AppColors.border,
+            ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                label,
+                style: AppTheme.mono(
+                  size: 13,
+                  color: hovering ? AppColors.accent : AppColors.textMuted,
+                ),
               ),
-            ),
-            child: Icon(
-              icon,
-              size: 18,
-              color: hovering ? AppColors.accent : AppColors.textMuted,
-            ),
+              const SizedBox(width: 6),
+              Icon(
+                Icons.arrow_outward,
+                size: 14,
+                color: hovering ? AppColors.accent : AppColors.textMuted,
+              ),
+            ],
           ),
         ),
       ),

@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'theme/app_theme.dart';
 
-// trying github
-
 void main() {
   runApp(const PortfolioApp());
 }

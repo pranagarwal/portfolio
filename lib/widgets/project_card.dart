@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../data/models.dart';
 import '../theme/app_theme.dart';
@@ -105,7 +104,7 @@ class ProjectCard extends StatelessWidget {
                             onTap: () => openUrl(project.githubUrl!),
                             child: Row(
                               children: [
-                                const FaIcon(FontAwesomeIcons.github,
+                                const Icon(Icons.code,
                                     size: 16, color: AppColors.textMuted),
                                 const SizedBox(width: 8),
                                 Text('Code',
