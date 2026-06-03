@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- SEO: update these for your own portfolio -->
+  <meta name="description" content="Full-stack developer specializing in Flutter and reactive Spring Boot backends.">
+  <meta name="keywords" content="full stack developer, flutter, spring boot, reactive, postgres, java">
+  <meta name="author" content="Your Name">
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="Your Name — Full-Stack Developer">
+  <meta property="og:description" content="Flutter & reactive Spring Boot. Building fast, scalable, full-stack products.">
+  <meta property="og:type" content="website">
+
+  <title>Your Name — Full-Stack Developer</title>
+
+  <style>
+    /* Loading screen shown before Flutter boots */
+    body { margin: 0; background-color: #0B0C0E; }
+    #loading {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: #0B0C0E; color: #D7FF3E; font-family: monospace; font-size: 14px; letter-spacing: 2px;
+    }
+    .dot { animation: blink 1.2s infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1 } 50% { opacity: 0.2 } }
+  </style>
+</head>
+<body>
+  <div id="loading">&gt; loading<span class="dot">_</span></div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
